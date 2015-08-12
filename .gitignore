@@ -21,3 +21,4 @@ packages/*
 /packages
 /*.user
 nuget.packages/
+Incloud.JQuery.Datatables/build.txt

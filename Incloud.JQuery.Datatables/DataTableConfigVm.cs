@@ -31,6 +31,7 @@ namespace Incloud.JQuery.Datatables
             this.ShowSearch = true;
             this.ShowPageSizes = true;
             this.TableTools = true;
+            this.UseDefaultStyle = true;
             ColumnFilterVm = new ColumnFilterSettingsVm(this);
             AjaxErrorHandler = 
                 "function(jqXHR, textStatus, errorThrown)" + 
@@ -41,6 +42,8 @@ namespace Incloud.JQuery.Datatables
         }
 
         public bool ShowSearch { get; set; }
+
+        public bool UseDefaultStyle { get; set; }
 
         public string Id { get; private set; }
 

@@ -5,6 +5,65 @@
 @using Newtonsoft.Json
 @using Newtonsoft.Json.Linq
 @model DataTableConfigVm
+
+@if (Model.UseDefaultStyle)
+{
+    <style>
+        table{
+            width: 100%;
+            max-width: 100%;
+            border-spacing: 0;
+        }
+
+        table tr {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        table>thead>tr>th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #ddd;
+            text-align: left;
+        }
+
+        table>tbody>tr>td, table>tbody>tr>th, table>tfoot>tr>td, table>tfoot>tr>th, table>thead>tr>td, table>thead>tr>th {
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 1px solid #ddd;
+        }
+
+        table>thead:first-child>tr:first-child>td, table>thead:first-child>tr:first-child>th {
+            border-top: 0;
+        }
+
+        table>tbody>tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        div.dataTables_length, div.dataTables_filter, div.dataTables_info, div.dataTables_paginate{
+            margin-bottom: 10px;
+        }
+
+         div.dataTables_length input, div.dataTables_filter input{
+             margin: 0 5px;
+        }
+
+         div.dataTables_info, div.dataTables_paginate {
+             text-align: center;
+         }
+
+         div.dataTables_paginate a{
+             margin: 0 5px;
+         }
+
+         div.dataTables_paginate a.current{
+             font-weight: bold;
+             text-decoration: underline;
+         }
+    </style>
+}
+
 <table id="@Model.Id" class="display @(Model.TableClass ?? DataTableConfigVm.DefaultTableClass ?? "")" @Html.Raw(Model.FixedLayout ? "style='table-layout:fixed'":"")>
     <thead>
         @if (Model.ColumnFilter)
