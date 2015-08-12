@@ -1,13 +1,7 @@
 turn IQueryables into datagrids
 ----------------------------------
 
-> Install-Package Mvc.JQuery.Datatables
-
-> Install-Package Mvc.JQuery.Datatables.Templates *
-
-
-[Demo site](http://aspdatatables.azurewebsites.net/)
-![Example](http://snag.gy/FQFdn.jpg)
+> Install-Package Incloud.JQuery.Datatables
 
  - turn any IQueryable into a live datagrid. Tested with:
    - Linq To Objects
@@ -23,15 +17,6 @@ turn IQueryables into datagrids
    - TableTools support (PDF/Excel export)
    - Attribute based configuration (optional)   
  - Can be run from dll 
- 
-*skip this if using EmbeddedResourceVirtualPathProvider
-
-
-See the test page and example project for info on how to use
-
-http://nuget.org/packages/Mvc.JQuery.Datatables
-
-The code here is based on code from http://code.google.com/p/datatables-asp-mvc/
 
 Note to users
 -------------
