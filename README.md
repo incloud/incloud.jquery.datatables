@@ -1,3 +1,7 @@
+#This package is a fork of mcintyre321's [mvc.jquery.datatables](https://github.com/mcintyre321/mvc.jquery.datatables) - Package.
+
+##The documentations of our changes will follow shortly
+
 turn IQueryables into datagrids
 ----------------------------------
 
